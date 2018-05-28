@@ -12,17 +12,14 @@
 # image_url: string  <img src="<%= @item.image_url %>">
 require 'faker'
 
-20.times do
-    Items.create([{
+
+Dir.foreach('app/assets/images/cats').each do |cat|
+    unless cat == '.' || cat == '..' 
+    Item.create(
         title: Faker::Cat.name,
         description: Faker::Cat.breed,
         price: Faker::Commerce.price,
-        image_url: seed_image()
-    }])
+        image_url: cat
+    )
     end
-
-        def seed_image()
-            File.open(File.join(Rails.root, "/app/assets/images/cats/#{file_name}.jpg"))
-        end
-
-#    <img src="<%= @item.image_url %>"
+end
