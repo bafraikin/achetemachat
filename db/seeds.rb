@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# table Item
+# title: string
+# description: text
+# price: decimal 
+# image_url: string  <img src="<%= @item.image_url %>">
+require 'faker'
+
+
+Dir.foreach('app/assets/images/cats').each do |cat|
+    unless cat == '.' || cat == '..' 
+    Item.create(
+        title: Faker::Cat.name,
+        description: Faker::Cat.breed,
+        price: Faker::Commerce.price,
+        image_url: cat
+    )
+    end
+end
