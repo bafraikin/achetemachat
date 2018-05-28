@@ -21,13 +21,6 @@
 
 				<div class="topbar-child2">
 					<span class="topbar-email">
-                    <% if user_signed_in? %>
-						<%= current_user.email%>
-                        <%= link_to "Log out", destroy_user_session_path, method: "delete" %>
-                    <% else%>
-                        <%= link_to "Log in", new_user_session_path %>
-                        <%= link_to "Sign up", new_user_registration_path %>
-                    <%end%>
 					</span>
 
 					<div class="topbar-language rs1-select2">
@@ -37,9 +30,16 @@
 						</select>
 					</div>
 
-					
+					<% if user_signed_in? %>
+						<%= current_user.email%>
+                        <%= link_to "Log out", destroy_user_session_path, method: "delete"  do %><img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON"></img><%end%>
+                    <% else%>
+                        <%= link_to "Log in", new_user_session_path %>
+                        &nbsp
+                        <%= link_to "Sign up", new_user_registration_path %>
+                    <%end%>
 					<a href="<%= new_user_session_path %>" class="header-wrapicon1 dis-block m-l-30">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						
 					</a>
 
 					<span class="linedivide1"></span>
