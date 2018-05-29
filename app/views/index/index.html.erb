@@ -19,7 +19,7 @@
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
 							<!-- Button -->
 							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
+								Acheter 
 							</a>
 						</div>
 					</div>
@@ -28,7 +28,9 @@
 				<div class="item-slick1 item2-slick1" style="background: url(images/chat-banner-2.jpg) no-repeat center fixed; background-size: cover;">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rollIn">
-							Le chaton mignon 2
+
+							Chaton mignon 2
+
 						</h2>
 
 						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="lightSpeedIn">
@@ -38,7 +40,7 @@
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
 							<!-- Button -->
 							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
+								Acheter 
 							</a>
 						</div>
 					</div>
@@ -47,7 +49,9 @@
 				<div class="item-slick1 item3-slick1" style="background: url(images/banner-chat-4.jpg) no-repeat center fixed; background-size: cover;">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rotateInDownLeft">
+
 							Chaton mignon 3
+
 						</h2>
 
 						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="rotateInUpRight">
@@ -57,7 +61,7 @@
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
 							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
+								Acheter 
 							</a>
 						</div>
 					</div>
@@ -110,9 +114,15 @@
 
 													<div class="block2-btn-addcart w-size1 trans-0-4">
 														<!-- Button -->
-														<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-															Ajouter au panier
-														</button>
+								
+														<%= link_to adding_path(item), method: 'post' do %> 
+															<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+																	Ajout panier
+															</button>
+														<%end%>
+														
+					
+														
 													</div>
 												</div>
 											</div>
@@ -122,9 +132,11 @@
 
 												
 												</a>
-
+												
 												<%= item.title %><br><br>
 												<%= item.description %><br><br>
+												
+
 
 												<span class="block2-price m-text6 p-r-5">
 													<%= item.price%> €
@@ -165,7 +177,6 @@
 	<!-- Modal Video 01-->
 
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
