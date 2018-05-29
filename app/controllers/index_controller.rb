@@ -7,6 +7,8 @@ class IndexController < ApplicationController
   end
   
   def cart
+
+
   end
 
   def add_to_cart
@@ -16,7 +18,6 @@ class IndexController < ApplicationController
     item = Item.find(params[:id])
     current_user.cart.items << item
     p current_user.cart.items
-    puts '__________________'
   end 
 
 end
