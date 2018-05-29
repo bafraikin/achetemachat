@@ -7,51 +7,47 @@
 		<div class="container-menu-header-v2 p-t-26">
 			<div class="topbar2">
 				<div class="topbar-social">
-					<a href="#" class="topbar-social-item fa fa-facebook"></a>
-					<a href="#" class="topbar-social-item fa fa-instagram"></a>
-					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
-					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
-					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+					<% if user_signed_in? %>
+									<%= current_user.email%>
+                    			<% else%>
+                    <%end%>
 				</div>
 
 				<!-- Logo2 -->
 				<a href='<%=root_path%>' class="logo2">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
+					<%= image_tag("icons/logo_min.png", :alt => "MACHAT")%>
 				</a>
 
 				<div class="topbar-child2">
 					<span class="topbar-email">
 					</span>
 
-					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
-						</select>
-					</div>
-
 					<% if user_signed_in? %>
-						<%= current_user.email%>
-                        <%= link_to "Log out", destroy_user_session_path, method: "delete"  do %><img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON"></img><%end%>
+                        <%= link_to destroy_user_session_path, method: "delete"  do %>Logout<%end%>
                     <% else%>
                         <%= link_to "Log in", new_user_session_path %>
                         &nbsp
                         <%= link_to "Sign up", new_user_registration_path %>
                     <%end%>
-					<a href="<%= new_user_session_path %>" class="header-wrapicon1 dis-block m-l-30">
+					
 						
 					</a>
 
 					<span class="linedivide1"></span>
 
 					<div class="header-wrapicon2 m-r-13">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						
+						<%= image_tag("icons/icon-header-02.png", :alt => "panier", :class => "header-icon1 js-show-header-dropdown")%>
 						<span class="header-icons-noti">0</span>
-
-						<!-- Header cart noti -->
+<!--  ######################################## -->
+<!-- Header cart noti -->
+<!--  ######################################## -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<%= image_tag("item-cart-01.jpg", :alt => "MACHAT")%>
+									</div>
 									<div class="header-cart-item-img">
 										<img src="images/item-cart-01.jpg" alt="IMG">
 									</div>
@@ -123,7 +119,9 @@
 					</div>
 				</div>
 			</div>
-
+<!--  ######################################## -->
+<!-- Header cart noti -->
+<!--  ######################################## -->
 			<div class="wrap_header">
 
 				<!-- Menu -->
@@ -131,32 +129,18 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="index.html">Home</a>
-								<ul class="sub_menu">
-									<li><a href="index.html">Homepage V1</a></li>
-									<li><a href="home-02.html">Homepage V2</a></li>
-									<li><a href="home-03.html">Homepage V3</a></li>
-								</ul>
+								<a href="<%root_path%>">Accueil</a>
 							</li>
 
 							<li>
-								<a href="product.html">Shop</a>
-							</li>
-
-							<li class="sale-noti">
-								<a href="product.html">Sale</a>
+								<a href="product.html">Tous les produits</a>
 							</li>
 
 							<li>
-								<a href="cart.html">Features</a>
+								<a href="cart.html">Panier</a>
 							</li>
-
 							<li>
-								<a href="blog.html">Blog</a>
-							</li>
-
-							<li>
-								<a href="about.html">About</a>
+								<a href="about.html">A propos</a>
 							</li>
 
 							<li>
@@ -176,7 +160,7 @@
 		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
-			<a href="index.html" class="logo-mobile">
+			<a href="<%root_path%>" class="logo-mobile">
 				<img src="images/icons/logo.png" alt="IMG-LOGO">
 			</a>
 
@@ -191,7 +175,7 @@
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<%= image_tag("icons/icon-header-02.png", :alt => "panier", :class => "header-icon1 js-show-header-dropdown")%>
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
@@ -290,7 +274,13 @@
 					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
 						<div class="topbar-child2-mobile">
 							<span class="topbar-email">
-								fashe@example.com
+								<% if user_signed_in? %>
+									<%= link_to destroy_user_session_path, method: "delete"  do %>Logout<%end%> 
+                    			<% else%>
+									<%= link_to "Log in", new_user_session_path %>
+									&nbsp
+									<%= link_to "Sign up", new_user_registration_path %>
+                    			<%end%>
 							</span>
 
 							<div class="topbar-language rs1-select2">
@@ -313,12 +303,7 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="index.html">Home</a>
-						<ul class="sub-menu">
-							<li><a href="index.html">Homepage V1</a></li>
-							<li><a href="home-02.html">Homepage V2</a></li>
-							<li><a href="home-03.html">Homepage V3</a></li>
-						</ul>
+						<a href="<%root_path%>">Home</a>
 						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
 					</li>
 
