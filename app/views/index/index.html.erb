@@ -114,9 +114,15 @@
 
 													<div class="block2-btn-addcart w-size1 trans-0-4">
 														<!-- Button -->
-														<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-															Ajouter au panier
-														</button>
+								
+														<%= link_to adding_path(item), method: 'post' do %> 
+															<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+																	Ajout panier
+															</button>
+														<%end%>
+														
+					
+														
 													</div>
 												</div>
 											</div>
@@ -126,9 +132,11 @@
 
 												
 												</a>
-
+												
 												<%= item.title %><br><br>
 												<%= item.description %><br><br>
+												
+
 
 												<span class="block2-price m-text6 p-r-5">
 													<%= item.price%> €
@@ -169,7 +177,6 @@
 	<!-- Modal Video 01-->
 
 <!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
