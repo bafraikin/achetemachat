@@ -38,87 +38,60 @@
 					<div class="header-wrapicon2 m-r-13">
 						
 						<%= image_tag("icons/icon-header-02.png", :alt => "panier", :class => "header-icon1 js-show-header-dropdown")%>
-						<span class="header-icons-noti">0</span>
+						<% if user_signed_in? && current_user.cart != nil %>
+							<span class="header-icons-noti"><%=current_user.cart.items.size%></span>
+						<%end%>
 <!--  ######################################## -->
 <!-- Header cart noti -->
 <!--  ######################################## -->
+<% if user_signed_in? && current_user.cart != nil %>
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
+							<% total = 0 %> <!-- Permet le calcul du montant total -->
+							<% current_user.cart.items.each do |item| %>
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<%= image_tag("item-cart-01.jpg", :alt => "MACHAT")%>
+										<%= image_tag('cats/' + item.image_url) %>  
 									</div>
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
-									</div>
-
 									<div class="header-cart-item-txt">
 										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
+											<%=item.title%>
 										</a>
-
 										<span class="header-cart-item-info">
-											1 x $19.00
+											<%=item.price%>€
 										</span>
+										</span>
+										<%= link_to remove_path(item), method: 'post' do %> X <%end%>
+										</span>
+										
 									</div>
 								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
+								<% total += item.price%> <!-- Montant total -->
+							<%end%>
+								
 							</ul>
 
 							<div class="header-cart-total">
-								Total: $75.00
+								Total: <%= total %> €
 							</div>
 
 							<div class="header-cart-buttons">
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										View Cart
-									</a>
+									<%=link_to "Panier", cart_path, class: "flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"%>
 								</div>
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
+									<%=link_to "Check out", root_path, class: "flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4"%>
+									
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+<%end %>
 <!--  ######################################## -->
 <!-- Header cart noti -->
 <!--  ######################################## -->
@@ -129,7 +102,7 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="<%root_path%>">Accueil</a>
+								<%=link_to "Accueil", root_path%>
 							</li>
 
 							<li>
@@ -137,7 +110,7 @@
 							</li>
 
 							<li>
-								<a href="cart.html">Panier</a>
+								<%=link_to "Panier", cart_path%>
 							</li>
 							<li>
 								<a href="about.html">A propos</a>
