@@ -15,12 +15,13 @@ class IndexController < ApplicationController
     end
 
     item = Item.find(params[:id])
-    current_user.cart.items << item
     p current_user.cart.items
     puts '__________________'
     sleep 0.4 
     redirect_to root_path
   end 
+
+  
 
   def rm_from_cart
   
