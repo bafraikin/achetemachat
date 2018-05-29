@@ -15,19 +15,12 @@
 
 				<!-- Logo2 -->
 				<a href='<%=root_path%>' class="logo2">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
+					<%= image_tag("icons/logo_min.png", :alt => "MACHAT")%>
 				</a>
 
 				<div class="topbar-child2">
 					<span class="topbar-email">
 					</span>
-
-					<div class="topbar-language rs1-select2">
-						<select class="selection-1" name="time">
-							<option>USD</option>
-							<option>EUR</option>
-						</select>
-					</div>
 
 					<% if user_signed_in? %>
                         <%= link_to destroy_user_session_path, method: "delete"  do %>Logout<%end%>
@@ -44,12 +37,17 @@
 
 					<div class="header-wrapicon2 m-r-13">
 						
+						<%= image_tag("icons/icon-header-02.png", :alt => "panier", :class => "header-icon1 js-show-header-dropdown")%>
 						<span class="header-icons-noti">0</span>
-
-						<!-- Header cart noti -->
+<!--  ######################################## -->
+<!-- Header cart noti -->
+<!--  ######################################## -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<%= image_tag("item-cart-01.jpg", :alt => "MACHAT")%>
+									</div>
 									<div class="header-cart-item-img">
 										<img src="images/item-cart-01.jpg" alt="IMG">
 									</div>
@@ -121,7 +119,9 @@
 					</div>
 				</div>
 			</div>
-
+<!--  ######################################## -->
+<!-- Header cart noti -->
+<!--  ######################################## -->
 			<div class="wrap_header">
 
 				<!-- Menu -->
@@ -129,27 +129,18 @@
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="<%root_path%>">Home</a>
+								<a href="<%root_path%>">Accueil</a>
 							</li>
 
 							<li>
-								<a href="product.html">Shop</a>
-							</li>
-
-							<li class="sale-noti">
-								<a href="product.html">Sale</a>
+								<a href="product.html">Tous les produits</a>
 							</li>
 
 							<li>
-								<a href="cart.html">Features</a>
+								<a href="cart.html">Panier</a>
 							</li>
-
 							<li>
-								<a href="blog.html">Blog</a>
-							</li>
-
-							<li>
-								<a href="about.html">About</a>
+								<a href="about.html">A propos</a>
 							</li>
 
 							<li>
@@ -184,7 +175,7 @@
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<%= image_tag("icons/icon-header-02.png", :alt => "panier", :class => "header-icon1 js-show-header-dropdown")%>
 						<span class="header-icons-noti">0</span>
 
 						<!-- Header cart noti -->
