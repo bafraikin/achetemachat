@@ -8,10 +8,7 @@ class IndexController < ApplicationController
   
   def cart
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   end
 
   def add_to_cart
