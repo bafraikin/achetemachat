@@ -39,7 +39,18 @@
   </head>
 	
 
-  <body class="animsition">
+  <body class="animsition" >
     <%= yield %>
   </body>
+	<script>
+	function reload() {
+		i = 0
+		while (i < 2 ) {
+			location.reload();	
+			i = i +1;
+		}
+		
+	}
+
+	</script>
 </html>

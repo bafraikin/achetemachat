@@ -5,4 +5,6 @@ class IndexController < ApplicationController
   	@items = Item.all
 
   end
+  def cart
+  end
 end

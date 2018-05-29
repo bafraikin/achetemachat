@@ -1,5 +1,5 @@
 
-
+<%= render 'layouts/navbar'%>
 	<!-- Slide1 -->
 	<section class="slide1">
 		<div class="wrap-slick1">
@@ -826,7 +826,7 @@
 					<!-- Block3 
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-01.jpg" alt="IMG-BLOG">
+							<%= image_tag("blog-01.jpg", :alt => "IMG-BLOG")%>
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -851,7 +851,7 @@
 					<!-- Block3 
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-02.jpg" alt="IMG-BLOG">
+							<%= image_tag("blog-02.jpg", :alt => "IMG-BLOG")%>
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -876,7 +876,7 @@
 					<!-- Block3 
 					<div class="block3">
 						<a href="blog-detail.html" class="block3-img dis-block hov-img-zoom">
-							<img src="images/blog-03.jpg" alt="IMG-BLOG">
+							<%= image_tag("blog-03.jpg", :alt => "IMG-BLOG")%>
 						</a>
 
 						<div class="block3-txt p-t-14">
@@ -1205,24 +1205,19 @@
 
 		<div class="t-center p-l-15 p-r-15">
 			<a href="#">
-				<img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
+				
+				<%= image_tag("icons/paypal.png", :alt => "IMG-BLOG", :class => "h-size2")%>
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA">
+				<%= image_tag("icons/visa.png", :alt => "IMG-BLOG", :class => "h-size2")%>
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD">
+				<%= image_tag("icons/mastercard.png", :alt => "IMG-BLOG", :class => "h-size2")%>
 			</a>
 
-			<a href="#">
-				<img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS">
-			</a>
-
-			<a href="#">
-				<img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
-			</a>
+			
 
 			<div class="t-center s-text8 p-t-20">
 				Copyright © 2018 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -1243,19 +1238,6 @@
 	<div id="dropDownSelect1"></div>
 
 	<!-- Modal Video 01-->
-	<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
-
-		<div class="modal-dialog" role="document" data-dismiss="modal">
-			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
-
-			<div class="wrap-video-mo-01">
-				<div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
-				<div class="video-mo-01">
-					<iframe src="https://www.youtube.com/embed/Nt8ZrWY2Cmk?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
 
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
