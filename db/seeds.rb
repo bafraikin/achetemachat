@@ -16,16 +16,18 @@ require 'faker'
 
 
 Dir.foreach('app/assets/images/cats').each do |cat|
+
     unless cat == '.' || cat == '..' 
     Item.create(
         title: Faker::Cat.name,
-        description: Faker::Cat.breed,
+        description: Faker::Lorem.paragraph,
         price: Faker::Commerce.price,
         image_url: cat
+
     )
     end
 
 end
 
-end
+
 
