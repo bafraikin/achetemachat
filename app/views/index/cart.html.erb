@@ -22,7 +22,7 @@
 							<th class="column-4 p-l-70">Quantité</th>
 							<th class="column-5">Total</th>
 						</tr>
-					<%if user_signed_in? %>
+					<%if user_signed_in? && current_user.cart != nil %>
 						<% total =0 %>
 							<% current_user.cart.items.each do |item| %>
 								<tr class="table-row">
