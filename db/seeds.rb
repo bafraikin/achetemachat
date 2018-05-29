@@ -21,7 +21,7 @@ Dir.foreach('app/assets/images/cats').each do |cat|
     Item.create(
         title: Faker::Cat.name,
         description: Faker::Lorem.paragraph,
-        price: Faker::Commerce.price,
+        price: Faker::Number.number(3),
         image_url: cat
 
     )
