@@ -9,7 +9,7 @@
 				<div class="topbar-social">
 					<% if user_signed_in? %>
 									<%= current_user.email%>
-                    			<% else%>
+                    <% else%>
                     <%end%>
 				</div>
 
@@ -40,6 +40,8 @@
 						<%= image_tag("icons/icon-header-02.png", :alt => "panier", :class => "header-icon1 js-show-header-dropdown")%>
 						<% if user_signed_in? && current_user.cart != nil %>
 							<span class="header-icons-noti"><%=current_user.cart.items.size%></span>
+						<%else%>
+							<span class="header-icons-noti"></span>
 						<%end%>
 <!--  ######################################## -->
 <!-- Header cart noti -->
@@ -91,6 +93,7 @@
 					</div>
 				</div>
 			</div>
+<%else%>
 <%end %>
 <!--  ######################################## -->
 <!-- Header cart noti -->
