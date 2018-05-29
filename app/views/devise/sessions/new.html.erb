@@ -1,6 +1,7 @@
 <%= image_tag("form_bckg.png", :alt => "background chaton", :class => "show_form_bckg")%>
 <button class="btn-back"><a href=<%=root_path%>>⇦ Vers l'accueil</a></button>
   <div id="user_form">
+  <h2> Se connecter </h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
           <%= f.label :email %><br /><br />
