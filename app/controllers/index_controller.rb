@@ -1,5 +1,5 @@
 class IndexController < ApplicationController
-	
+	before_action :authenticate_user!, only: [:cart]
   def index
 
     @items = Item.all
