@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :cart
-  has_many :bridge_commands
-  has_many :commands, through: :bridge_commands
+  has_many :commands
 
 end

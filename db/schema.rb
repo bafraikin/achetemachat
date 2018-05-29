@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2018_05_29_165202) do
 
-  create_table "bridge_commands", force: :cascade do |t|
-    t.integer "command_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["command_id"], name: "index_bridge_commands_on_command_id"
-    t.index ["user_id"], name: "index_bridge_commands_on_user_id"
-  end
-
   create_table "bridges", force: :cascade do |t|
     t.integer "cart_id"
     t.integer "item_id"
