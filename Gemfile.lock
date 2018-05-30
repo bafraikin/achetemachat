@@ -179,6 +179,10 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mailjet (1.5.4)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
+      rest-client
     marcel (0.3.2)
       mimemagic (~> 0.3.2)
     memoist (0.16.0)
@@ -379,6 +383,7 @@ DEPENDENCIES
   letter_opener
   listen
   mail
+  mailjet
   pg (= 0.20.0)
   poltergeist
   pry
