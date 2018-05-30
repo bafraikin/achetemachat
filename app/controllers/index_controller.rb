@@ -31,5 +31,7 @@ class IndexController < ApplicationController
 
   end 
 
+  def upload
+  end
 
 end

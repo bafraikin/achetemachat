@@ -1,0 +1,11 @@
+<%= image_tag("form_bckg.png", :alt => "background chaton", :class => "show_form_bckg")%>
+<button class="btn-back"><a href=<%=root_path%>>⇦ Vers l'accueil</a></button>
+  <div id="user_form">
+<h1>New Item</h1>
+
+<%= render 'form', item: @item %>
+
+
+<%= link_to 'Back', items_path %>
+
+  </div>

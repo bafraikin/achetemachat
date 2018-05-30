@@ -20,7 +20,8 @@ gem 'jbuilder'
 gem 'mail'
 gem 'twitter'
 gem 'json'
-
+gem 'attachinary'
+gem 'google-cloud-storage'
 
 group :development, :test do
   gem 'sqlite3'

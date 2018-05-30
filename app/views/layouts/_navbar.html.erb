@@ -26,9 +26,9 @@
 					<% if user_signed_in? %>
                         <%= link_to destroy_user_session_path, method: "delete"  do %>Logout<%end%>
                     <% else%>
-                        <%= link_to "Log in", new_user_session_path %>
+                        <%= link_to "Connexion", new_user_session_path %>
                         &nbsp
-                        <%= link_to "Sign up", new_user_registration_path %>
+                        <%= link_to "S'enregistrer", new_user_registration_path %>
                     <%end%>
 					
 						
@@ -55,7 +55,11 @@
 								<% current_user.cart.items.each do |item| %>
 									<li class="header-cart-item">
 										<div class="header-cart-item-img">
-											<%= image_tag('cats/' + item.image_url) %>  
+										<%if item.image_url != nil %>
+													<%= image_tag('cats/' + item.image_url) %>  
+										<%else%>
+													<%= image_tag item.image%>
+										<%end%> 
 										</div>
 										<div class="header-cart-item-txt">
 											<a href="#" class="header-cart-item-name">
@@ -65,7 +69,7 @@
 												<%=item.price%>€
 											</span>
 											<span>
-											<%= link_to remove_path(item), method: 'post' do %> X <%end%>
+											<%= link_to remove_path(item), method: 'post' do %> Supprimer <%end%>
 											</span>
 										</div>
 									</li>
@@ -104,9 +108,7 @@
 
 								<div class="header-cart-wrapbtn">
 									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
+									<%= link_to "Check Out", new_cart_path, class: "flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" %>
 								</div>
 							</div>
 							<div class="header-cart-total">
@@ -155,14 +157,13 @@
 							<li>
 								<%=link_to "Panier", cart_path%>
 							</li>
+							<li>
+								<%=link_to "Création items admin", new_item_path%>
+							</li>
+							<li>
+								<%=link_to "Tous les items admin", items_path%>
+							</li>
 						<% end %>
-							<li>
-								<a href="about.html">A propos</a>
-							</li>
-
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
 						</ul>
 					</nav>
 				</div>

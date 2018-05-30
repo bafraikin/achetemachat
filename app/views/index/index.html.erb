@@ -100,10 +100,11 @@
 		 								
 										<div class="block2">
 											<div class="block2-img wrap-pic-w of-hidden pos-relative block2">
-
-												
-												<%= image_tag('cats/' + item.image_url) %>  
-
+												<%if item.image_url != nil %>
+													<%= image_tag('cats/' + item.image_url) %>  
+												<%else%>
+													<%= image_tag item.image%>
+												<%end%>
 
 												<div class="block2-overlay trans-0-4">
 
@@ -111,19 +112,20 @@
 														<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 														<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 													</a>
-
-													<div class="block2-btn-addcart w-size1 trans-0-4">
+													<% if user_signed_in? %>
+														<div class="block2-btn-addcart w-size1 trans-0-4">
 														<!-- Button -->
-														<% if user_signed_in? %>
+														
 															<%= link_to adding_path(item), method: 'post' do %> 
 															<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
 																	Ajout panier
 															</button>
-														<%end%>
+															<%end%>
 						
                     									<% else%>
+														<div class="w-size1 trans-0-4" style="margin-top:50%;margin-left:23%;">
 															<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-																	Connecte-toi !
+																	<%= link_to "Connexion", new_user_session_path %>
 															</button>
                     									<%end%>
 														

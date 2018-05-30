@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ .title-table-cart{
+ text-align:left;
+ }
+
  #user_form{
     margin-top: 5%;
     margin-left: 35%;
@@ -41,6 +46,12 @@
         border-radius: 2px;
         &:focus{
             border: 2px solid #1BBC9B!important;
+        }
+
+        .stripe-button {
+
+        display: none 
+
         }
 
         

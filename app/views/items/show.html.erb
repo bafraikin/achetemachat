@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag("form_bckg.png", :alt => "background chaton", :class => "show_form_bckg")%>
+<button class="btn-back"><a href=<%=root_path%>>⇦ Vers l'accueil</a></button>
+  <div id="user_form">
+  
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @item.price %>
+</p>
+
+
+
+<% if @item.image.attached? %>
+  <p>
+    <strong>Image:</strong>
+    <br>
+   <%= image_tag @item.image, :style => "width:60%" %></div>
+  </p>
+<% end %>
+<p style=" text-align: center;
+    margin-top: -60px;">
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %></p>
+</div>
