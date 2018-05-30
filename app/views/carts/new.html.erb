@@ -1,0 +1,59 @@
+
+<div class="container-table-cart pos-relative">
+				<div class="wrap-table-shopping-cart bgwhite">
+					<table class="table-shopping-cart">
+						<tr class="table-head">
+							<th class="column-1 title-table-cart"></th>
+							<th class="column-2 title-table-cart">Produit</th>
+							<th class="column-3 title-table-cart">Prix</th>
+						
+						</tr>
+<% total =0 %>
+<% current_user.cart.items.each do |item| %>
+						<tr class="table-row">
+									<td class="column-1">
+										<div class="cart-img-product b-rad-4 o-f-hidden">
+											<%= image_tag('cats/' + item.image_url) %>
+										
+									</td>
+									<td class="column-2"><%= item.title %></td>
+									<td class="column-3"> <%= item.price %>€</td>
+									<td class="column-4"></td>
+										<div class="flex-w bo5 of-hidden w-size17">
+<% total += item.price %>
+
+<%end%>									</div>
+									</td>
+										</div>
+
+						</tr>
+					</table>
+				</div>
+</div>
+
+<section>
+<div class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
+				<h5 class="m-text20 p-b-24">
+					Total à régler
+				</h5>
+<div class="flex-w flex-sb-m p-t-26 p-b-30">
+					<span class="m-text22 w-size19 w-full-sm">
+						Total:
+					</span>
+
+					<span class="m-text21 w-size20 w-full-sm">
+					<!-- Permet le calcul du montant total -->
+					<%= total %> €
+					
+					</span>
+				</div>
+
+				<div class="size15 trans-0-4">
+					<!-- Button -->
+				
+						<%= link_to "Confirmer commande", pay_path, class: "flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" %>
+				
+				</div>
+			</div>
+		</div>
+	</section>

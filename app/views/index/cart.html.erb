@@ -150,15 +150,15 @@
 					<span class="m-text21 w-size20 w-full-sm">
 					<!-- Permet le calcul du montant total -->
 					<%= total %> €
-					<% %>
+					
 					</span>
 				</div>
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
-					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-						Paiement de mon panier
-					</button>
+				
+						<%= link_to "Passer commande", new_cart_path, class: "flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" %>
+				
 				</div>
 			</div>
 		</div>
