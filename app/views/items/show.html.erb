@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<%= image_tag("form_bckg.png", :alt => "background chaton", :class => "show_form_bckg")%>
+<button class="btn-back"><a href=<%=root_path%>>⇦ Vers l'accueil</a></button>
+  <div id="user_form">
+  
 <p>
   <strong>Title:</strong>
   <%= @item.title %>
@@ -15,18 +18,17 @@
   <%= @item.price %>
 </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @item.image_url %>
-</p>
+
 
 <% if @item.image.attached? %>
   <p>
     <strong>Image:</strong>
     <br>
-    <%= image_tag @item.image %>
+   <%= image_tag @item.image, :style => "width:60%" %></div>
   </p>
 <% end %>
-<img src=<%Rails.application.routes.url_helpers.rails_blob_path(@item.image, only_path: true)%> > </img>
+<p style=" text-align: center;
+    margin-top: -60px;">
 <%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<%= link_to 'Back', items_path %></p>
+</div>
