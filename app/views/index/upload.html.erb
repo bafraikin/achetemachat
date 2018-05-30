@@ -1,0 +1,13 @@
+<div class="field">
+  <%= form.label :image %>
+  <%= form.file_field :image %>
+</div>
+
+<% if @item.image.attached? %>
+<!-- @post.image.present? will always return true, use attached? to check presence -->
+  <p>
+    <strong>Image:</strong>
+    <br>
+    <%= image_tag @item.image %>
+  </p>
+<% end %>
