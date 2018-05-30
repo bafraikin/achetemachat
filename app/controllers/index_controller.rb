@@ -1,11 +1,11 @@
 class IndexController < ApplicationController
-	before_action :authenticate_user!, only: [:cart]
+  before_action :authenticate_user!, only: [:cart]
   def index
 
     @items = Item.all
 
   end
-  
+
   def cart
   end
 
@@ -24,26 +24,13 @@ class IndexController < ApplicationController
   
 
   def rm_from_cart
-  
-    item = current_user.cart.items.find(params[:id])
-    item_id = item.id
-     index = 0
-    while  index < current_user.cart.items.length
-      if item_id == current_user.cart.items[index].id
-        break
-      end
-      index += 1
-    end 
 
-    p index
-
-    current_user.cart.items[index].delete
-    #.slice!(index)
+    item_id = params[:id]
+    cart_id = current_user.cart.id
+    bridge = Bridge.where("cart_id == #{cart_id} AND item_id == #{item_id} ").first
+    bridge.destroy
     redirect_to root_path
 
-    
-    #cart = c.destroy(params[:id])
-    
   end 
 
 
