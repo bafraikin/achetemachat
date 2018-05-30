@@ -1,7 +1,7 @@
 class CartsController < ApplicationController
    def show
- 
- @items = current_user.cart.items.all
+
+item = current_user.cart.items.all
  # Récupérer ts les items dans le panier du current user
   end
 
