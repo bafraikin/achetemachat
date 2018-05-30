@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  get 'profil', to: 'profil#profil'
   root 'index#index'
   get 'cart', to: 'index#cart', as: 'cart'
   post '/panier/remove/:id', to: "index#rm_from_cart", as: :remove
