@@ -100,10 +100,11 @@
 		 								
 										<div class="block2">
 											<div class="block2-img wrap-pic-w of-hidden pos-relative block2">
-
-												
-												<%= image_tag('cats/' + item.image_url) %>  
-
+												<%if item.image_url != nil %>
+													<%= image_tag('cats/' + item.image_url) %>  
+												<%else%>
+													<%= image_tag item.image%>
+												<%end%>
 
 												<div class="block2-overlay trans-0-4">
 
