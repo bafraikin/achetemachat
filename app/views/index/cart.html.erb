@@ -6,7 +6,7 @@
 			Panier
 		</h2>
 	</section>
-
+<%= render 'layouts/navbar'%>
 	<!-- Cart -->
 	<section class="cart bgwhite p-t-70 p-b-100">
 		<div class="container">
@@ -28,7 +28,11 @@
 								<tr class="table-row">
 									<td class="column-1">
 										<div class="cart-img-product b-rad-4 o-f-hidden">
-											<%= image_tag('cats/' + item.image_url) %>
+											<%if item.image_url != nil %>
+													<%= image_tag('cats/' + item.image_url) %>  
+												<%else%>
+													<%= image_tag item.image%>
+												<%end%>
 										</div>
 									</td>
 									<td class="column-2"><%= item.title %></td>
