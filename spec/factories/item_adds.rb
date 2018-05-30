@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :item do
+  factory :item_add do
     title "MyString"
     description "MyText"
     price "9.99"
