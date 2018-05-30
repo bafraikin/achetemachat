@@ -50,8 +50,25 @@
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
+
 				
-						<%= link_to "Confirmer commande", pay_path, class: "flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" %>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %> 
+  
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="item.price"
+          data-locale="auto"> </script>
+  
+          </script>
+          
+        
 				
 				</div>
 			</div>
