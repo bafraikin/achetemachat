@@ -106,5 +106,4 @@ ActiveRecord::Schema.define(version: 2018_05_30_103412) do
     t.index ["order_id"], name: "index_users_on_order_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
 end
