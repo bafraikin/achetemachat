@@ -79,24 +79,13 @@ Toute l'équipe.
 
 ## Installation
 
-Une fois le repo cloné, fais ces commandes pour installer les gems et lancer le projet sur ton serveur local :
+Une fois le repo cloné, UNE seule commande est à entrer:
 
 
 ```
-bundle install 
+./correction.sh 
 ```
 
-```
-rails db:migrate 
-```
-
-```
-rails db:seed
-```
-
-```
-rails s
-```
 
 ## Pré-requis
 
