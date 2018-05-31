@@ -97,7 +97,7 @@ Projet libre de droit et d'accès à la lecture/écriture. Pour pouvoir visualis
 Firefox, Safari, Chrome, Internet Explorer 8, ...
 ```
 
-![coucou](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjUuoTb3rDbAhUJXBQKHTHeCAEQjRx6BAgBEAU&url=https%3A%2F%2Fgifimage.net%2F9gag-gif-11%2F&psig=AOvVaw3buHbHTyl7Z-TZU5AEjGJ1&ust=1527883204313472)
+![coucou]()
 ## Contributors
 
 * Baptiste : https://github.com/bafraikin
