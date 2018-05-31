@@ -59,9 +59,11 @@
 
 					<div class="w-size2 p-t-20">
 						<!-- Button -->
-						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-							S'inscrire
-						</button>
+						<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" onclick="UserMailer.with(user: @user).user_mailer.deliver_now">S'inscrire
+						</button>	
+						<!--<button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" action="" method=post> S'inscrire
+						</button>-->
+
 					</div>
 
 				</form>
