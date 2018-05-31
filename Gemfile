@@ -23,6 +23,7 @@ gem 'twitter'
 gem 'json'
 gem 'attachinary'
 gem 'google-cloud-storage'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'sqlite3'

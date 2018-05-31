@@ -1,10 +1,10 @@
 test:
   service: Disk
-  root: <%= Rails.root.join("assets/images/cats") %>
+  root: <%= Rails.root.join("storage") %>
 
 local:
   service: Disk
-  root: <%= Rails.root.join("assets/images/cats") %>
+  root: <%= Rails.root.join("tmp/storage") %>
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
@@ -16,10 +16,10 @@ local:
 
 # Remember not to checkin your GCS keyfile to a repository
 google:
-service: GCS
-project: mashat-205712
-credentials: AIzaSyBdpANue2zW-3Y2zm4rbzDJXg7CCaif_H0
-bucket: imagemashat
+  service: GCS
+  project: mashat-205712
+  key: ENV['GOOGLE_CREDENTIALS']
+  bucket: imagemashat
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
