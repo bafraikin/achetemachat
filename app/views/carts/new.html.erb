@@ -57,25 +57,32 @@
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
-
+<%= form_tag charges_path do %>
 				
+<% tag.article data: { user_id: current_user } %>
+
+
     <% if flash[:error].present? %>
       <div id="error_explanation">
         <p><%= flash[:error] %></p>
       </div>
-    <% end %> 
+    <%end%>
+
+
+   
+
   
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="item.price"
-          data-locale="auto"> </script>
-  
+          data-description= "<%= total%> €"
+          data-amount="<%= a = total * 100 %> "
+          data-locale= "<%current_user%>"
           </script>
-          
-        
+
+          <% end %>
+
 				
 				</div>
 			</div>
