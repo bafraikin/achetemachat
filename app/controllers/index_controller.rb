@@ -31,6 +31,16 @@ class IndexController < ApplicationController
 
   end 
 
+  def rm_from_cart_page
+
+    item_id = params[:id]
+    cart_id = current_user.cart.id
+    bridge = Bridge.where("cart_id == #{cart_id} AND item_id == #{item_id} ").first
+    bridge.destroy
+    redirect_to root_path
+
+  end 
+
   def upload
   end
 

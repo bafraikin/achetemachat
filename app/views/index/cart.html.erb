@@ -1,12 +1,11 @@
 
 	<%= render 'layouts/navbar'%>
 	<!-- Title Page -->
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/heading-pages-01.jpg);">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/banner-chat-5.jpg);">
 		<h2 class="l-text2 t-center">
 			Panier
 		</h2>
 	</section>
-
 	<!-- Cart -->
 	<section class="cart bgwhite p-t-70 p-b-100">
 		<div class="container">
@@ -28,7 +27,11 @@
 								<tr class="table-row">
 									<td class="column-1">
 										<div class="cart-img-product b-rad-4 o-f-hidden">
-											<%= image_tag('cats/' + item.image_url) %>
+											<%if item.image_url != nil %>
+													<%= image_tag('cats/' + item.image_url) %>  
+												<%else%>
+													<%= image_tag item.image%>
+												<%end%>
 										</div>
 									</td>
 									<td class="column-2"><%= item.title %></td>
@@ -170,15 +173,7 @@
 
 
 
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
-	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+
 	<script type="text/javascript">
 		$(".selection-1").select2({
 			minimumResultsForSearch: 20,
