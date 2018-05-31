@@ -1,0 +1,59 @@
+<%= render 'layouts/navbar'%>
+<hr>
+
+<div class="container">
+    <%= link_to edit_user_registration_path do %> <button type="button" class="btn btn-info btn-sm" style= "float: right;"> Editer mon profil</button><%end%>
+    <br>
+        <h1>Commandes passées</h1>
+        <br>
+        <p>Voici l'historique de vos commandes passées.</p>
+        <br>
+        <br>
+         <div class="container">                 
+            <% current_user.commands.each do |onecommand| %>
+                <h3>N° Commande : <%= onecommand.id %> </h3>
+                <br>
+                <table class="table" style="width:75%">
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Description</th>
+                            <th>Montant</th>
+                            <th><!--prix--></th>
+                            <th><!--montant total--></th>                            
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                <tbody>
+                </tbody>
+                </table>
+                
+            <div class="table command-overflow" style="overflow-x: scroll; max-height: 400px; width:75%;">
+                <table>                    
+                    <thead>
+                    </thead>
+                        <tbody>
+                            <% total =0 %>
+                            <% onecommand.items.each do |item| %>
+                                <tr>
+                                    <td> <%= image_tag('cats/' + item.image_url , style: 'height:15%;width:auto;')%></td>
+                                    <td> <%= item.title %></td>
+                                    <td> <%= item.price %>€</td>
+                                    <td> </td>
+                                    <td> <b><% total += item.price %>€</b></td>
+                                    <td> </td>
+                                </tr>
+                            <%end%>
+                        </tbody>
+                </table>
+                </div>
+            <br><br>
+            <%end%>
+        <hr>
+    <div>
+
+<%= render 'layouts/footer'%>
+
+       
