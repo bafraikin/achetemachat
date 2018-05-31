@@ -1,7 +1,7 @@
 # Projet e-Commerce
 
 ## Présentation du programme:
-Le programme a été fait par Paul, Baptiste, Jordane, Pâcome & Selma
+Le programme a été fait par Paul, Baptiste, Jordane, Pacôme & Selma
 
 
 
@@ -96,7 +96,7 @@ Projet libre de droit et d'accès à la lecture/écriture. Pour pouvoir visualis
 Firefox, Safari, Chrome, Internet Explorer 8, ...
 ```
 
-##Liens heroku ici
+## Liens heroku ici
 
 
 [Lien Heroku](https://mashat.herokuapp.com/)
