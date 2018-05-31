@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-
-
+  get 'profil', to: 'profil#profil'
   resources :items
   resources :item_adds
   root 'index#index'

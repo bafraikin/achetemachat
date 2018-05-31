@@ -4,8 +4,8 @@
 		<div class="container-menu-header-v2 p-t-26">
 			<div class="topbar2">
 				<div class="topbar-social">
-					<% if user_signed_in? %>
-									<%= current_user.email%>
+					<% if user_signed_in? %>							 
+									<%= link_to profil_path do%> <%= current_user.email%> <%end%>
                     <% else%>
 					<p> Bienvenue :D </p>
                     <%end%>
