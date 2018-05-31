@@ -1,1 +1,22 @@
-<h2>Thanks, you paid <strong>$5.00</strong>!</h2>
+
+
+<h2> Commande validée !</h2>
+
+<% ord = Order.new
+    ord.user = current_user
+    ord.save
+    com = Command.new
+    com.user = current_user
+
+    current_user.cart.items.each do | item |
+      com.items << item
+    end
+    com.save
+    current_user.cart.items.clear %>
+
+	<div class="size15 trans-0-4">
+
+		 <%= link_to 'Retour accueil', root_path, class: "flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" %>
+
+	</div>
+
