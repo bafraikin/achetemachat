@@ -1,4 +1,4 @@
-
+<%= render 'layouts/navbar'%>
 <div class="container-table-cart pos-relative">
 				<div class="wrap-table-shopping-cart bgwhite">
 					<table class="table-shopping-cart">
@@ -6,6 +6,7 @@
 							<th class="column-1 title-table-cart"></th>
 							<th class="column-2 title-table-cart">Produit</th>
 							<th class="column-3 title-table-cart">Prix</th>
+							<th class="column-4 title-table-cart"></th>
 						
 						</tr>
 <% total =0 %>
@@ -13,12 +14,18 @@
 						<tr class="table-row">
 									<td class="column-1">
 										<div class="cart-img-product b-rad-4 o-f-hidden">
-											<%= image_tag('cats/' + item.image_url) %>
+											<%if item.image_url != nil %>
+													<%= image_tag('cats/' + item.image_url) %>  
+												<%else%>
+													<%= image_tag item.image%>
+												<%end%>
 										
 									</td>
 									<td class="column-2"><%= item.title %></td>
 									<td class="column-3"> <%= item.price %>€</td>
-									<td class="column-4"></td>
+									<td class="column-4">
+											<%= link_to remove_path(item), method: 'post' do %> Supprimer <%end%>
+											</td>
 										<div class="flex-w bo5 of-hidden w-size17">
 <% total += item.price %>
 
@@ -50,27 +57,35 @@
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
-
+<%= form_tag charges_path do %>
 				
+<% tag.article data: { user_id: current_user } %>
+
+
     <% if flash[:error].present? %>
       <div id="error_explanation">
         <p><%= flash[:error] %></p>
       </div>
-    <% end %> 
+    <%end%>
+
+
+   
+
   
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="item.price"
-          data-locale="auto"> </script>
-  
+          data-description= "<%= total%> €"
+          data-amount="<%= a = total * 100 %> "
+          data-locale= "<%current_user%>"
           </script>
-          
-        
+
+          <% end %>
+
 				
 				</div>
 			</div>
 		</div>
 	</section>
+	<%= render 'layouts/footer'%>

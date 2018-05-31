@@ -10,6 +10,7 @@ end
 def create
   # Amount in cents
   @amount = 500
+  puts "coucou"
 
   customer = Stripe::Customer.create(
     :email => params[:stripeEmail],
@@ -23,9 +24,12 @@ def create
     :currency    => 'eur'
   )
 
+
+
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to new_charge_path
 end
+
 
 end
