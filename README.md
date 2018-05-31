@@ -48,15 +48,22 @@ L'objectif est simple : ce projet nous permet de vous donner une marche à suivr
 
 ### 4. Ajout du panier  ✅
 
+Une fois dans la page panier, après avoir cliqué sur "valider commande", 
+
+il faudra refresh la page.
+
 ### 5. Profil User avec historique des commandes ✅
 
 ### 6. Intégration du paiement avec Stripe + Confirmation du paiement ✅
 
-### 7. ActionMailer & MailJet  ✅
+### 7. ActionMailer & MailJet  ❌
+Le code est présent mais pas fonctionnel.
 
-### 8. Ajout d'admin / Forest Admin ✅
+### 8. Ajout d'admin / Forest Admin ❌
 
-### 9. Page Contact & About ✅
+On a perdu la bataille contre Forest.
+
+### 9. Possibilité pour l'utilisateur d'ajouter un item ✅
 
 
  

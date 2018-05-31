@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ForestLiana::Engine => '/forest'
   get 'profil', to: 'profil#profil'
   resources :items
   resources :item_adds
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   post '/panier/:id', to: "index#add_to_cart", as: :adding
   devise_for :users
 
-  resources :carts, only: [:new]
+  resources :carts
   get 'show', to: 'carts#show', as: 'pay'
   resources :charges
 

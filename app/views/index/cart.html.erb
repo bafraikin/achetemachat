@@ -149,10 +149,12 @@
 				<div class="size15 trans-0-4">
 					<!-- Button -->
 				
-						<%= link_to "Passer commande", new_cart_path, class: "flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" %>
+						<%= link_to new_cart_path do%> 
+						<button href="/carts/new" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">Passer commande</button>
+						<%end%>
 	
 
-				
+				</div>
 				</div>
 			</div>
 		</div>
