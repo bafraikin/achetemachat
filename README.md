@@ -86,6 +86,7 @@ Une fois le repo cloné, UNE seule commande est à entrer:
 ./correction.sh 
 ```
 
+![coucou](https://media.giphy.com/media/FSsqs5x9MBVrq/giphy.gif)
 
 ## Pré-requis
 
@@ -98,9 +99,8 @@ Firefox, Safari, Chrome, Internet Explorer 8, ...
 ##Liens heroku ici
 
 
-##### [Lien Heroku](https://mashat.herokuapp.com/)
+[Lien Heroku](https://mashat.herokuapp.com/)
 
-![coucou](https://media.giphy.com/media/FSsqs5x9MBVrq/giphy.gif)
 
 
 ## Contributors
