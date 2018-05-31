@@ -23,10 +23,11 @@ L'objectif est simple : ce projet nous permet de vous donner une marche à suivr
 
 ### 1. Trouver une framework stylay pour le front ✅
 
-#### Intégration d'une template type e-commerce
+* Intégration d'une template type e-commerce
 
-BDD les carts 
-User devise 
+* Page d'index des produits 
+
+ 
 
 ### 2. Les images ✅
 
@@ -45,7 +46,36 @@ User devise
 * Table 
 
 
-### 4. 
+### 4. Ajout du panier  ✅
+
+### 5. Profil User avec historique des commandes ✅
+
+### 6. Intégration du paiement avec Stripe + Confirmation du paiement ✅
+
+### 7. ActionMailer & MailJet  ✅
+
+### 8. Ajout d'admin / Forest Admin ✅
+
+### 9. Page Contact & About ✅
+
+
+ 
+### 10. Cuisine ✅
+
+Baptiste aux fourneaux 
+
+### 11. Vaisselle ✅
+
+Jordane et Selma 
+
+### 12 Balai ✅
+
+Pacôme
+
+### 13. Bières 🍺  ✅
+
+Toute l'équipe.
+
 
 ## Installation
 
@@ -75,6 +105,7 @@ Projet libre de droit et d'accès à la lecture/écriture. Pour pouvoir visualis
 ```
 Firefox, Safari, Chrome, Internet Explorer 8, ...
 ```
+
 ## Contributors
 
 * Baptiste : https://github.com/bafraikin
