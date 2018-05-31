@@ -118,10 +118,14 @@
 															<%end%>
 						
                     									<% else%>
-														<div class="w-size1 trans-0-4" style="margin-top:50%;margin-left:23%;">
-															<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-																	<%= link_to "Connexion", new_user_session_path %>
+														<div class="block2-btn-addcart w-size1 trans-0-4">
+
+																	<%= link_to new_user_registration_path do %>
+																	<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+																	Connexion
+
 															</button>
+															<%end%>
                     									<%end%>
 														
 														
@@ -221,7 +225,7 @@ function scrollWin(x, y) {
 		$('.block2-btn-addcart').each(function(){
 			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
 			$(this).on('click', function(){
-				swal(nameProduct, "is added to cart !", "success");
+				swal(nameProduct, "ajouté au panier !", "success");
 			});
 		});
 
