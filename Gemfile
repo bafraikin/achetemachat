@@ -23,6 +23,8 @@ gem 'twitter'
 gem 'json'
 gem 'attachinary'
 gem 'google-cloud-storage'
+gem "better_errors"
+  gem "binding_of_caller"
 
 group :development, :test do
   gem 'sqlite3'
@@ -37,8 +39,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
+  
   gem 'letter_opener'
   gem 'web-console'
   gem 'listen'
@@ -54,7 +55,8 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
+  
 end
-
+gem "aws-sdk-s3", require: false
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
