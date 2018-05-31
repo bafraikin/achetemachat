@@ -1,9 +1,8 @@
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
 
-require 'mailjet'
-require 'active_storage'
+require "mailjet"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -21,6 +20,5 @@ module Chat
     # the framework and any gems in your application.
 
     config.action_mailer.delivery_method = :mailjet
-    
   end
 end

@@ -23,7 +23,8 @@ gem 'twitter'
 gem 'json'
 gem 'attachinary'
 gem 'google-cloud-storage'
-gem 'carrierwave'
+gem "better_errors"
+  gem "binding_of_caller"
 
 group :development, :test do
   gem 'sqlite3'
@@ -38,8 +39,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
+  
   gem 'letter_opener'
   gem 'web-console'
   gem 'listen'
