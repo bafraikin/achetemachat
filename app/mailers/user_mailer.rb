@@ -10,7 +10,7 @@ class UserMailer < ApplicationMailer
 	end
 
 	def admin_mailer
-	
+
 	    @order = params[:order]
 	
 	    mail(to: 'bob.chamo@laposte.net', subject: "New Order", reply_to: 'bob.chamo@laposte.net') do |format|
