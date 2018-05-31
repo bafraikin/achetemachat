@@ -11,5 +11,4 @@ rails db:seed
 echo -e "\033[5m\033[32m\033[44m\033[1mPuis le serveur pour avoir les photos de chatons\033[1m\033[0m\033[0m\033[0m \n"
 rails s
 curl parrot.live
-echo "coucou"
 
