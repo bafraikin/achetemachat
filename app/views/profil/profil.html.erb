@@ -13,47 +13,45 @@
             <% current_user.commands.each do |onecommand| %>
                 <h3>N° Commande : <%= onecommand.id %> </h3>
                 <br>
-                <table class="table" style="width:75%">
+                <table class="table" style="width:55%">
                     <thead>
                         <tr>
                             <th>Produit</th>
                             <th>Description</th>
                             <th>Montant</th>
                             <th><!--prix--></th>
-                            <th><!--montant total--></th>                            
-                            <th></th>
-                            <th></th>
-                            <th></th>
                         </tr>
                     </thead>
-                <tbody>
-                </tbody>
                 </table>
                 
-            <div class="table command-overflow" style="overflow-x: scroll; max-height: 400px; width:75%;">
-                <table>                    
-                    <thead>
-                    </thead>
+            <div class="table command-overflow" style="overflow-x: scroll; max-height: 400px; width:55%;">
+                <table class="table">                   
                         <tbody>
-                            <% total =0 %>
+                            <% total = 0 %>
                             <% onecommand.items.each do |item| %>
                                 <tr>
                                     <td> <%= image_tag('cats/' + item.image_url , style: 'height:15%;width:auto;')%></td>
                                     <td> <%= item.title %></td>
                                     <td> <%= item.price %>€</td>
-                                    <td> </td>
-                                    <td> <b><% total += item.price %>€</b></td>
-                                    <td> </td>
+                                    <td> <b><% total += item.price %></b></td>
                                 </tr>
-                            <%end%>
                         </tbody>
+                            <%end%>
+
                 </table>
                 </div>
+
+                <table class="table" style= "width:15%;">
+                    <thead><th>Montant Total:  </th></thead>
+                    <td><%= total %></td>
+                </table>
             <br><br>
             <%end%>
         <hr>
     <div>
 
 <%= render 'layouts/footer'%>
+
+       
 
        
