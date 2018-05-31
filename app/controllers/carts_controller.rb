@@ -14,6 +14,8 @@ class CartsController < ApplicationController
 
     current_user.cart.items.each do | item |
       com.items << item
+      OrderMailer.with(order: @order).user_order_mailer.deliver_now
+      OrderMailer.with(order: @order).admin_order_mailer.deliver_now
     end
     com.save
     current_user.cart.items.clear
