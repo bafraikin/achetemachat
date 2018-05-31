@@ -1,10 +1,8 @@
 # Projet e-Commerce
 
 ## Présentation du programme:
-Le programme a été fait par Paul, Baptiste, Jordane, Pâcome & Selma
+Le programme a été fait par Paul, Baptiste, Jordane, Pacôme & Selma
 
-#### Lien Heroku:
-##### https://
 
 
 ## Mission
@@ -95,6 +93,7 @@ Une fois le repo cloné, UNE seule commande est à entrer:
 ./correction.sh 
 ```
 
+![coucou](https://media.giphy.com/media/FSsqs5x9MBVrq/giphy.gif)
 
 ## Pré-requis
 
@@ -104,7 +103,13 @@ Projet libre de droit et d'accès à la lecture/écriture. Pour pouvoir visualis
 Firefox, Safari, Chrome, Internet Explorer 8, ...
 ```
 
-![coucou]()
+## Liens heroku ici
+
+
+[Lien Heroku](https://mashat.herokuapp.com/)
+
+
+
 ## Contributors
 
 * Baptiste : https://github.com/bafraikin
