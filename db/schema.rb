@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_05_30_103412) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", force: :cascade do |t|
+  create_table "active_storage_blobs", force: :cascade do |t|. #permet aux utilisateurs d'intégrer des images 
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
