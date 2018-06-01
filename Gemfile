@@ -24,7 +24,8 @@ gem 'json'
 gem 'attachinary'
 gem 'google-cloud-storage'
 gem "better_errors"
-  gem "binding_of_caller"
+gem "binding_of_caller"
+gem 'forest_liana'
 
 group :development, :test do
   gem 'sqlite3'

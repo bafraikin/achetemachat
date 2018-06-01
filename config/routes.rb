@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount ForestLiana::Engine => '/forest'
   get 'profil', to: 'profil#profil'
   resources :items
   resources :item_adds
