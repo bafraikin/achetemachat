@@ -59,7 +59,7 @@ Le code est présent mais pas fonctionnel.
 
 ### 8. Ajout d'admin / Forest Admin ✅
 On vous surveille !<br>
-<img src="https://image.noelshack.com/minis/2018/22/5/1527836570-capture-d-ecran-2018-06-01-a-09-00-28.png" border="0" alt="1527836570-capture-d-ecran-2018-06-01-a-09-00-28.png - envoi d'image avec NoelShack" title="1527836570-capture-d-ecran-2018-06-01-a-09-00-28.png"/>
+<img src="https://image.noelshack.com/fichiers/2018/22/5/1527836570-capture-d-ecran-2018-06-01-a-09-00-28.png" />
 
 ### 9. Possibilité pour l'utilisateur d'ajouter un item ✅
 
