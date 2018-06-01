@@ -132,7 +132,7 @@ GEM
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
-    forest_liana (2.6.1)
+    forest_liana (2.5.5)
       arel-helpers
       bcrypt
       groupdate
